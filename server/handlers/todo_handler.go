@@ -36,7 +36,7 @@ func GetTodos(c *fiber.Ctx) error {
 func CreateTodo(c *fiber.Ctx) error {
 	todoCollection := database.GetCollection("todos")
 	todo := new(models.Todo)
-	// {id:0,completed:false,body:""}
+	// { id:0, completed:false, body:"" }
 
 	if err := c.BodyParser(todo); err != nil {
 		return c.Status(400).JSON(err.Error())
@@ -79,7 +79,7 @@ func UpdateTodo(c *fiber.Ctx) error {
 		return c.Status(500).JSON(err.Error())
 	}
 
-	return c.SendStatus(200)
+	return c.Status(200).JSON(fiber.Map{"success": true})
 }
 
 func CompleteTodo(c *fiber.Ctx) error {
@@ -88,10 +88,6 @@ func CompleteTodo(c *fiber.Ctx) error {
 	id, err := primitive.ObjectIDFromHex(idParam)
 	if err != nil {
 		return c.Status(400).JSON("Invalid ID")
-	}
-
-	if err != nil {
-		return c.Status(400).JSON(fiber.Map{"error": "Invalid todo ID"})
 	}
 
 	filter := bson.M{"_id": id}
