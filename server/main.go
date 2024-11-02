@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 
 	"github.com/photkosee/todo-go/config"
 	"github.com/photkosee/todo-go/database"
@@ -27,6 +28,11 @@ func main() {
 	defer database.CloseMongoDB()
 
 	app := fiber.New()
+
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:     "http://localhost:5173",
+		AllowHeaders:     "Origin, Content-Type, Accept",
+	}))
 
 	// setup routes
 	routes.TodoRoutes(app)

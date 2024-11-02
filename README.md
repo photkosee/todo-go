@@ -1,3 +1,44 @@
+## Table of Contents
+- [What this does](#what-this-does)
+- [Built with](#built-with)
+- [Reflection](#reflection)
+- [From Node.js to Golang](#from-nodejs-to-golang)
+
+## What this does
+
+This is a simple Todo List application. My main objective with this project is to become more familiar with Golang and Fiber.
+
+## Built with
+
+### Frontend
+
+- React
+- Tailwind CSS
+- TanStack Query
+
+### Backend
+
+- Golang
+- Fiber
+- MongoDB
+
+## How to run
+
+Navigate to the server directory then run the following command to start the server:
+```
+air
+```
+Navigate to the client directory then run the following command to run the frontend:
+```
+npm run dev
+```
+
+## Reflection
+
+### Express to Fiber
+
+This is my first time working with Fiber, and I can see why it's called 'Express for Go'. I've been working with JavaScript and TypeScript for sometime now, so I'm more familiar with Express when developing a server. As for Fiber, things are quite similar to Express but adapted for Go. I've structured the backend much like I would for an Express project. However, I've read discussions suggesting that this approach may not align with typical Go conventions. I'll need to explore better ways to organize a Go project. Since the API for this project is relatively simple, I haven't noticed any downsides to structuring it this way so far.
+
 ## From Node.js to Golang
 
 ### Equivalent of `npm init` in Go
