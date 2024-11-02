@@ -1,5 +1,6 @@
 ## Table of Contents
 - [What this does](#what-this-does)
+- [Demo](#demo)
 - [Built with](#built-with)
 - [Reflection](#reflection)
 - [From Node.js to Golang](#from-nodejs-to-golang)
@@ -7,6 +8,10 @@
 ## What this does
 
 This is a simple Todo List application. My main objective with this project is to become more familiar with Golang and Fiber.
+
+## Demo
+
+https://github.com/user-attachments/assets/ecdc1eb1-3e37-4411-8095-7604ca849473
 
 ## Built with
 
@@ -21,17 +26,6 @@ This is a simple Todo List application. My main objective with this project is t
 - Golang
 - Fiber
 - MongoDB
-
-## How to run
-
-Navigate to the server directory then run the following command to start the server:
-```
-air
-```
-Navigate to the client directory then run the following command to run the frontend:
-```
-npm run dev
-```
 
 ## Reflection
 
